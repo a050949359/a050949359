@@ -15,7 +15,7 @@
 
   <!-- name fades up -->
   <text x="80" y="200" font-size="64" font-weight="700" fill="#F7EDE2" opacity="0">
-    Harold Chen
+    OhYa
     <animate attributeName="opacity" from="0" to="1" begin="0.3s" dur="0.6s" fill="freeze"/>
   </text>
 
