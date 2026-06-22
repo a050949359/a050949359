@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" font-family="'Segoe UI','Noto Sans TC','Helvetica Neue',Arial,sans-serif">
+  <style>
+    .card { opacity: 0; animation: cardIn .55s ease forwards; }
+    @keyframes cardIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    .chip { opacity: 0; animation: fadeIn .45s ease forwards; }
+    @keyframes fadeIn { to { opacity: 1; } }
+    .head { opacity: 0; animation: fadeIn .6s ease forwards; }
+    .live { animation: pulse 2.2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
+    text { fill: #F7EDE2; }
+  </style>
+
+  <rect width="1280" height="640" fill="#1C1410"/>
+
+  <!-- legend -->
+  <g class="head">
+    <circle cx="54" cy="70" r="5" fill="#C4622D" class="live"/>
+    <text x="68" y="75" font-size="15" fill="#A8C5B8">running</text>
+    <circle cx="162" cy="70" r="5" fill="#A8C5B8"/>
+    <text x="176" y="75" font-size="15" fill="#A8C5B8">not deployed</text>
+  </g>
+
+  <g transform="translate(0,-34)">
+
+  <!-- ===== Row 0 ===== -->
+
+  <!-- Desktop (idle) -->
+  <g class="card" style="animation-delay:.05s">
+    <rect x="48" y="150" width="278" height="210" rx="14" fill="#3D2B1F" stroke="#5a4233"/>
+    <text x="68" y="190" font-size="21" font-weight="700">Desktop</text>
+    <circle cx="306" cy="180" r="6" fill="#8a7d70"/>
+    <g class="chip" style="animation-delay:.4s">
+      <rect x="68" y="210" width="238" height="34" rx="17" fill="none" stroke="#5a4233" stroke-dasharray="4 4"/>
+      <text x="86" y="232" font-size="15" fill="#8a7d70">idle</text>
+    </g>
+  </g>
+
+  <!-- Laptop -->
+  <g class="card" style="animation-delay:.13s">
+    <rect x="350" y="150" width="278" height="210" rx="14" fill="#3D2B1F" stroke="#5a4233"/>
+    <text x="370" y="190" font-size="21" font-weight="700">Laptop</text>
+    <circle cx="608" cy="180" r="6" fill="#C4622D" class="live"/>
+    <g class="chip" style="animation-delay:.5s">
+      <rect x="370" y="206" width="238" height="32" rx="16" fill="#3a2418" stroke="#C4622D"/>
+      <circle cx="388" cy="222" r="3.5" fill="#C4622D"/>
+      <text x="404" y="227" font-size="15" fill="#F2C49B">wasm-opencv</text>
+    </g>
+    <g class="chip" style="animation-delay:.6s">
+      <rect x="370" y="246" width="238" height="32" rx="16" fill="#3a2418" stroke="#C4622D"/>
+      <circle cx="388" cy="262" r="3.5" fill="#C4622D"/>
+      <text x="404" y="267" font-size="15" fill="#F2C49B">my-llm</text>
+    </g>
+    <g class="chip" style="animation-delay:.7s">
+      <rect x="370" y="286" width="238" height="32" rx="16" fill="#3a2418" stroke="#C4622D"/>
+      <circle cx="388" cy="302" r="3.5" fill="#C4622D"/>
+      <text x="404" y="307" font-size="15" fill="#F2C49B">wasm-sensor</text>
+    </g>
+  </g>
+
+  <!-- GCP VM -->
+  <g class="card" style="animation-delay:.21s">
+    <rect x="652" y="150" width="278" height="210" rx="14" fill="#3D2B1F" stroke="#5a4233"/>
+    <text x="672" y="190" font-size="21" font-weight="700">GCP VM</text>
+    <circle cx="910" cy="180" r="6" fill="#C4622D" class="live"/>
+    <g class="chip" style="animation-delay:.55s">
+      <rect x="672" y="206" width="238" height="32" rx="16" fill="#3a2418" stroke="#C4622D"/>
+      <circle cx="690" cy="222" r="3.5" fill="#C4622D"/>
+      <text x="706" y="227" font-size="15" fill="#F2C49B">linebot</text>
+    </g>
+    <g class="chip" style="animation-delay:.65s">
+      <rect x="672" y="246" width="238" height="32" rx="16" fill="#3a2418" stroke="#C4622D"/>
+      <circle cx="690" cy="262" r="3.5" fill="#C4622D"/>
+      <text x="706" y="267" font-size="15" fill="#F2C49B">mini-orch</text>
+    </g>
+    <g class="chip" style="animation-delay:.75s">
+      <rect x="672" y="286" width="238" height="32" rx="16" fill="#3a2418" stroke="#C4622D"/>
+      <circle cx="690" cy="302" r="3.5" fill="#C4622D"/>
+      <text x="706" y="307" font-size="15" fill="#F2C49B">crawler</text>
+    </g>
+  </g>
+
+  <!-- LightNode VM -->
+  <g class="card" style="animation-delay:.29s">
+    <rect x="954" y="150" width="278" height="210" rx="14" fill="#3D2B1F" stroke="#5a4233"/>
+    <text x="974" y="190" font-size="21" font-weight="700">LightNode VM</text>
+    <circle cx="1212" cy="180" r="6" fill="#C4622D" class="live"/>
+    <g class="chip" style="animation-delay:.6s">
+      <rect x="974" y="210" width="238" height="32" rx="16" fill="#3a2418" stroke="#C4622D"/>
+      <circle cx="992" cy="226" r="3.5" fill="#C4622D"/>
+      <text x="1008" y="231" font-size="15" fill="#F2C49B">collaboration-with-AI</text>
+    </g>
+  </g>
+
+  <!-- ===== Row 1 ===== -->
+
+  <!-- GitHub Pages -->
+  <g class="card" style="animation-delay:.37s">
+    <rect x="48" y="384" width="278" height="210" rx="14" fill="#3D2B1F" stroke="#5a4233"/>
+    <text x="68" y="424" font-size="21" font-weight="700">GitHub Pages</text>
+    <circle cx="306" cy="414" r="6" fill="#C4622D" class="live"/>
+    <g class="chip" style="animation-delay:.7s">
+      <rect x="68" y="444" width="238" height="32" rx="16" fill="#3a2418" stroke="#C4622D"/>
+      <circle cx="86" cy="460" r="3.5" fill="#C4622D"/>
+      <text x="102" y="465" font-size="15" fill="#F2C49B">my-tools</text>
+    </g>
+  </g>
+
+  <!-- OracleVM1 -->
+  <g class="card" style="animation-delay:.45s">
+    <rect x="350" y="384" width="278" height="210" rx="14" fill="#3D2B1F" stroke="#5a4233"/>
+    <text x="370" y="424" font-size="21" font-weight="700">OracleVM1</text>
+    <circle cx="608" cy="414" r="6" fill="#C4622D" class="live"/>
+    <g class="chip" style="animation-delay:.78s">
+      <rect x="370" y="444" width="238" height="32" rx="16" fill="#3a2418" stroke="#C4622D"/>
+      <circle cx="388" cy="460" r="3.5" fill="#C4622D"/>
+      <text x="404" y="465" font-size="15" fill="#F2C49B">mini-orch</text>
+    </g>
+  </g>
+
+  <!-- OracleVM2 -->
+  <g class="card" style="animation-delay:.53s">
+    <rect x="652" y="384" width="278" height="210" rx="14" fill="#3D2B1F" stroke="#5a4233"/>
+    <text x="672" y="424" font-size="21" font-weight="700">OracleVM2</text>
+    <circle cx="910" cy="414" r="6" fill="#C4622D" class="live"/>
+    <g class="chip" style="animation-delay:.86s">
+      <rect x="672" y="444" width="238" height="32" rx="16" fill="#3a2418" stroke="#C4622D"/>
+      <circle cx="690" cy="460" r="3.5" fill="#C4622D"/>
+      <text x="706" y="465" font-size="15" fill="#F2C49B">mini-orch</text>
+    </g>
+  </g>
+
+  <!-- Not deployed -->
+  <g class="card" style="animation-delay:.61s">
+    <rect x="954" y="384" width="278" height="210" rx="14" fill="#3D2B1F" stroke="#5a4233" stroke-dasharray="6 5"/>
+    <text x="974" y="424" font-size="21" font-weight="700" fill="#A8C5B8">Not deployed</text>
+    <circle cx="1212" cy="414" r="6" fill="#A8C5B8"/>
+    <g class="chip" style="animation-delay:.94s">
+      <rect x="974" y="444" width="238" height="32" rx="16" fill="#2b2622" stroke="#A8C5B8" stroke-dasharray="4 3"/>
+      <circle cx="992" cy="460" r="3.5" fill="#A8C5B8"/>
+      <text x="1008" y="465" font-size="14" fill="#A8C5B8">collaboration-with-AI-e2e</text>
+    </g>
+  </g>
+  </g>
+</svg>
